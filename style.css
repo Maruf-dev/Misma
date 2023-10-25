@@ -82,15 +82,10 @@ header {
 header .main-wrapper {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   height: 100%;
 }
 
-/* header > .main-wrapper {
-    display: flex;
-    align-items: center;
-    height: 100%;
-} */
 
 .main-menu ul li a {
   color: #fff;
@@ -203,9 +198,7 @@ h1 {
 .main-board__button-link {
   display: flex;
   align-items: center;
-  justify-content: center;
   border: 1px solid #00D5C3;
-  font-size: 18px;
   border-radius: 0 5px 0 5px;
   text-decoration: none;
   padding: 10px 19px;
@@ -244,4 +237,13 @@ h1 {
 .btn-txt {
   color: #fff;
   font-size: 12px;
+}
+
+.main-board__button-link:hover{
+  background: #00D5C3;
+}
+.main-board__button-link:hover i{
+  color: #fff;
+  
+
 }
