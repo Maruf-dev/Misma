@@ -13,7 +13,19 @@
 * {
   margin: 0;
   padding: 0;
+  /* add below code after the making header */
+  scroll-behavior: smooth;
   /* box-sizing: border-box; */
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #161c35d7;
+}
+
+::selection {
+  color: white;
+  background: #161c35d7;
 }
 
 /*
@@ -24,7 +36,9 @@
 body {
   /* line-height: 1.5; */
   -webkit-font-smoothing: antialiased;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  
+  
 }
 
 /*
@@ -66,8 +80,11 @@ h6 {
 header {
   height: 65px;
   background: #161c35;
-
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
+
 
 .main-wrapper {
   margin: 0 auto;
@@ -86,14 +103,13 @@ header .main-wrapper {
   height: 100%;
 }
 
-
 .main-menu ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: 400;
   letter-spacing: 1px;
   margin-right: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   position: relative;
 }
@@ -106,21 +122,20 @@ header .main-wrapper {
   content: "";
   width: 0%;
   height: 3px;
-  background: #00D5C3;
+  background: #00d5c3;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
   top: 22px;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .main-menu ul li a:hover::after {
   width: 100%;
-
 }
 
-/* MAIN */
+/* MAIN  1st section*/
 h1 {
   font-size: 48px;
   font-weight: 700;
@@ -136,7 +151,7 @@ h1 {
   width: 115px;
   height: 5px;
   position: absolute;
-  background: #00D5C3;
+  background: #00d5c3;
   top: 0;
   left: 0;
 }
@@ -146,7 +161,7 @@ h1 {
   width: 5px;
   height: 115px;
   position: absolute;
-  background: #00D5C3;
+  background: #00d5c3;
   top: 0;
   left: 0;
 }
@@ -170,11 +185,11 @@ h1 {
 .main-board {
   height: 500px;
   background: url(images/bg.jpg) 50% -50px / cover no-repeat fixed;
-  /* background-position: ; */
-  /* background-repeat: no-repeat;
-  background-position: fixed;
-  background-size: cover; */
   position: relative;
+  /* background-position: ; */
+  /* background-repeat: no-repeat; */
+  /* background-position: fixed; */
+  /* background-size: cover; */
 }
 
 .main-board::after {
@@ -190,7 +205,7 @@ h1 {
 
 .main-board__left-block div:first-of-type {
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
@@ -198,22 +213,21 @@ h1 {
 .main-board__button-link {
   display: flex;
   align-items: center;
-  border: 1px solid #00D5C3;
+  border: 1px solid #00d5c3;
   border-radius: 0 5px 0 5px;
   text-decoration: none;
   padding: 10px 19px;
   margin-top: 30px;
   gap: 15px;
   color: white;
-  transition-duration: .3s;
-
+  transition-duration: 0.3s;
 }
 
 .main-board__button-link i {
   font-size: 30px;
-  color: #00D5C3;
+  color: #00d5c3;
   width: 26px;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 .main-board__button-link_bold {
@@ -223,7 +237,6 @@ h1 {
 
 .bb {
   border: 1px solid red;
-
 }
 
 .button-wrapper {
@@ -239,11 +252,124 @@ h1 {
   font-size: 12px;
 }
 
-.main-board__button-link:hover{
-  background: #00D5C3;
+.main-board__button-link:hover {
+  background: #00d5c3;
 }
-.main-board__button-link:hover i{
-  color: #fff;
-  
 
+.main-board__button-link:hover i {
+  color: #fff;
 }
+
+/* 2nd section */
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #444;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 span {
+  position: relative;
+}
+
+h2 span::after {
+  content: "";
+  background: #444;
+  height: 2px;
+  width: 40%;
+  margin-left: -20%;
+  left: 50%;
+  top: 120%;
+  position: absolute;
+}
+
+.services__block-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.services__item {
+  padding: 30px;
+  flex: 0 0 33.333%;
+  text-align: center;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+}
+
+.services__item:hover {
+  box-shadow: 0 5px 25px 0 rgba(5, 5, 5, 0.2);
+}
+
+.box-icon {
+  border: 1px solid #161c35;
+  border-radius: 50%;
+  height: 108px;
+  width: 108px;
+  line-height: 108px;
+  text-align: center;
+  margin: 0 auto;
+  transition-duration: 0.3s;
+}
+
+.box-icon i {
+  font-size: 54px;
+  color: #161c35;
+  line-height: 108px;
+  transition-duration: 0.3s;
+}
+
+.services__item:hover .box-icon {
+  background: #161c35;
+}
+
+.services__item:hover .box-icon>i {
+  color: #ffffff;
+}
+
+/* card heading */
+.services__item > h3 {
+  margin: 23px 0;
+  color: #161C35;
+  text-align: center;
+}
+/* card button */
+
+.services__item > p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 24px;
+  margin-bottom: 20px;
+  color: #666666;
+}
+/* card button */
+
+.services__item > a {
+  display: inline-block;
+  padding: 2px 30px;
+  line-height: 50px;
+  color: #161C35;
+  font-size: 18px;
+  border-radius: 0 5px 0 5px;
+  border: 1px solid #161C35;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+/* card button */
+.services__item > a:hover {
+  background: #161C35;
+  color: #FFFFFF;
+}
+
+/* general padding for all headings */
+
+.services, .works, .team, .blog, .contact, footer {
+  padding: 60px 0;
+}
+
+
